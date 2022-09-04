@@ -1,10 +1,37 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>Cloudflare proxy support for ASP.NET Core</Title>
+    <Authors>altair</Authors>
+    <Version>1.0.0</Version>
+    <Company>Altairis</Company>
+    <PackageId>Altairis.Services.Cloudflare</PackageId>
+    <Product>Altairis.Services.Cloudflare</Product>
+    <Copyright>(c) Michal A. Valášek - Altairis, 2022</Copyright>
+    <Description>Support for configuring Forwarded Headers Middleware for Cloudflare.</Description>
+    <PackageProjectUrl>https://github.com/ridercz/Altairis.Services.Cloudflare</PackageProjectUrl>
+    <PackageIcon>NuGet-64x64.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/ridercz/Altairis.Services.Cloudflare.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\NuGet-64x64.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.HttpOverrides" Version="2.2.0" />
