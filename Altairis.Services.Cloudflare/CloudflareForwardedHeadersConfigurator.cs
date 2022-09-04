@@ -9,7 +9,7 @@ public static class CloudflareForwardedHeadersConfigurator {
     private const string CloudflareIPv6ListUrl = "https://www.cloudflare.com/ips-v6";
     private const string CloudflareConnectingIpHeaderName = "CF-Connecting-IP";
 
-    public static async Task<ForwardedHeadersOptions> GetForwardedHeadersOptionsForCloudflare() {
+    public static async Task<ForwardedHeadersOptions> GetForwardedHeadersOptions() {
         var options = new ForwardedHeadersOptions {
             ForwardedHeaders = ForwardedHeaders.XForwardedFor,
             ForwardedForHeaderName = CloudflareConnectingIpHeaderName,
@@ -45,6 +45,6 @@ public static class CloudflareForwardedHeadersConfigurator {
         });
     }
 
-    public static IApplicationBuilder UseCloudflare(this IApplicationBuilder app) => app.UseForwardedHeaders(GetForwardedHeadersOptionsForCloudflare().Result);
+    public static IApplicationBuilder UseCloudflare(this IApplicationBuilder app) => app.UseForwardedHeaders(GetForwardedHeadersOptions().Result);
 
 }
